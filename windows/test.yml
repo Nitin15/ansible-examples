@@ -25,7 +25,7 @@
             - "stat_file.stat.size > 0"
             - "stat_file.stat.md5"
 
- - name: Add User
-   win_user:
-      name: ansible
-      password: "@ns1bl3"
+  - name: Add User
+    win_user:
+       name: ansible
+       password: "@ns1bl3"
