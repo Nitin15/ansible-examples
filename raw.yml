@@ -1,0 +1,12 @@
+---
+- name: testing raw module as first task
+  hosts: 52.24.164.95
+  remote_user: root
+  become: yes
+  
+  tasks:
+  - name: install package
+    raw: "yum install -y python-simplejson"
+    register: output
+
+  - debug: var=output
