@@ -1,6 +1,6 @@
 ---
 - name: testing raw module as first task
-  hosts: 52.24.164.95
+  hosts: "{{myHost}}"
   remote_user: root
   become: yes
   gather_facts: false
