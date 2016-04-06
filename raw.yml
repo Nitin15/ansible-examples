@@ -6,8 +6,14 @@
   gather_facts: false
   
   tasks:
-  - name: install package
-    raw: "yum install -y python-simplejson"
-    register: output
+  - name: date thing to get around this 
+    raw: date
 
-  - debug: var=output
+  - name: Touch file to avoid ask about bse prompt 
+    raw: touch /var/upgrade/.inspect_load_upgrade
+
+  - name: Loading images 
+    raw: /var/upgrade/loadimages
+
+  - name: remove previous file just to be safe 
+    raw: rm -f /var/upgrade/.inspect_load_upgrade
