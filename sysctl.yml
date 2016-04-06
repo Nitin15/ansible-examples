@@ -1,0 +1,13 @@
+---
+- name: testing sysctl
+  hosts: 52.10.41.127
+  remote_user: ec2-user
+  become: yes
+  
+  tasks:
+  - name: 1.6.1 Restrict core dumps (Scored) - via sysctl
+    sysctl: >
+      name=fs.suid_dumpable
+      value=0
+      state=present
+      ignoreerrors=yes
