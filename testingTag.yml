@@ -1,0 +1,11 @@
+---
+- name: testing tag
+  hosts: tag_Windows
+  remote_user: ubuntu
+  become: yes
+  
+  tasks:
+  - name: install apache
+    apt: name=apache2 state=present
+    
+    
