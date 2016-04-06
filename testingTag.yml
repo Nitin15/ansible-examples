@@ -1,11 +1,13 @@
 ---
 - name: testing tag
   hosts: tag_Windows
-  remote_user: ubuntu
-  become: yes
+ 
   
   tasks:
-  - name: install apache
-    shell: echo "Hello world"
+  - name: run ipconfig
+    raw: ipconfig
+    register: ipconfig
+  
+  - debug: var=ipconfig
     
     
