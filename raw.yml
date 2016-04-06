@@ -10,10 +10,7 @@
     raw: date
 
   - name: Touch file to avoid ask about bse prompt 
-    raw: touch /var/upgrade/.inspect_load_upgrade
-
-  - name: Loading images 
-    raw: /var/upgrade/loadimages
-
+    raw: touch /var/michelle.txt
+    
   - name: remove previous file just to be safe 
-    raw: rm -f /var/upgrade/.inspect_load_upgrade
+    raw: rm -f /var/michelle.txt
