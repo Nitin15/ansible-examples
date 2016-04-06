@@ -6,6 +6,6 @@
   
   tasks:
   - name: install apache
-    apt: name=apache2 state=present
+    shell: echo "Hello world"
     
     
