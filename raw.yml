@@ -9,8 +9,11 @@
   - name: date thing to get around this 
     raw: date
 
-  - name: Touch file to avoid ask about bse prompt 
-    raw: touch /var/michelle.txt
+  - name: Make a long ass directory 
+    file: path={{myPath}} state=directory
+  
+  - name: place a file in long ass directory
+    file: path={{myPath}}/michelle.txt state=touch
     
   - name: remove previous file just to be safe 
     raw: rm -f /var/michelle.txt
