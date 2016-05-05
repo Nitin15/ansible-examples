@@ -1,0 +1,9 @@
+---
+- name: testing long-running tasks
+  hosts: all
+  remote_user: ec2-user
+  become: yes
+  
+  tasks:
+  - name: run a yum update
+    shell: yum -y update
